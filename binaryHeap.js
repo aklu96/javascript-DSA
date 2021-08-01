@@ -67,10 +67,11 @@
 // and then iteratively returns the root of the `BinaryHeap` until its empty, thus returning a sorted array.
 
 
-function BinaryHeap() {
+function BinaryHeap(compare) {
   this._heap = [];
   // this compare function will result in a minHeap, use it to make comparisons between nodes in your solution
-  this._compare = function (i, j) { return i < j };
+  // for min heap: function (i, j) { return i < j };
+  this._compare = compare;
 }
 
 // This function works just fine and shouldn't be modified
@@ -88,7 +89,7 @@ BinaryHeap.prototype.insert = function (value) {
   const balance = (c) => {             // c = child index
     const p = Math.floor((c - 1) / 2); // parent index
 
-    // compare function will return true if child is less than parent
+    // compare function will return true if child is less than parent (assuming minHeap)
     if (this._compare(arr[c], arr[p])) {
       const ph = arr[c]; // placeholder
       arr[c] = arr[p];
@@ -149,6 +150,9 @@ BinaryHeap.prototype.removeRoot = function () {
   return root;
 }
 
+module.exports = BinaryHeap;
+
+/*
 const minHeap = new BinaryHeap();
 minHeap.insert(7);
 minHeap.insert(6);
@@ -158,3 +162,4 @@ minHeap.insert(3);
 console.log(minHeap._heap);
 minHeap.removeRoot();
 console.log(minHeap._heap);
+*/
