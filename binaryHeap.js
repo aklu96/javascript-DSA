@@ -71,6 +71,7 @@ function BinaryHeap(compare) {
   this._heap = [];
   // this compare function will result in a minHeap, use it to make comparisons between nodes in your solution
   // for min heap: function (i, j) { return i < j };
+  // unlike JS sort, it's a COMPARISON OPERATOR, not minus signs
   this._compare = compare;
 }
 
