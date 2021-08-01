@@ -151,6 +151,14 @@ BinaryHeap.prototype.removeRoot = function () {
   return root;
 }
 
+BinaryHeap.prototype.size = function () {
+  return this._heap.length;
+}
+
+BinaryHeap.prototype.elements = function () {
+  return this._heap;
+}
+
 module.exports = BinaryHeap;
 
 /*
