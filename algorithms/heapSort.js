@@ -1,4 +1,4 @@
-const Heap = require('./binaryHeap.js');
+const Heap = require('../data-structures/binaryHeap.js');
 
 // O(N*log N) time complexity
 const heapSort = (arr, comparator) => {

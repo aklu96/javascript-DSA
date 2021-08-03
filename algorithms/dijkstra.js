@@ -14,7 +14,7 @@ step 1: convert edge list to adjacency set
 
 */
 
-const Heap = require('../../../javascript-data-structures/binaryHeap.js');
+const Heap = require('../data-structures/binaryHeap.js');
 
 // O(V + E) operation to make this graph given the input
 class Graph {
